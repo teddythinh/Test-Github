@@ -1,4 +1,4 @@
-// AVL Tree
+// AVL Tree code by TeddyThinh
 #include <iostream>
 #include <queue>
 #include <fstream>
@@ -200,5 +200,3 @@ int main() {
     fin.close();
     return 0;
 }
-
-//Code from TeddyThinh
