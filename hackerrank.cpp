@@ -1,19 +1,9 @@
-#include <stdio.h>
 #include <iostream>
-#include <cmath>
+
 using namespace std;
-void update(int *a,int *b) {
-    *a = *a + *b;
-    *b = abs(*a - 2* *b);
-}
-
-int main() {
-    int a, b;
-    int *pa = &a, *pb = &b;
-    
-    scanf("%d %d", &a, &b);
-    update(pa, pb);
-    printf("%d\n%d", a, b);
-
-    return 0;
+int main()
+{
+    int w, h;
+    cin >> w >> h;
+    cout << w << " " << h << endl << w * h;
 }
