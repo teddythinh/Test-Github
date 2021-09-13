@@ -4,7 +4,7 @@
 using namespace std;
 void update(int *a,int *b) {
     *a = *a + *b;
-    *b = *b - *a;
+    *b = abs(*a - 2* *b);
 }
 
 int main() {
