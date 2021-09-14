@@ -1,11 +1,14 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 int main()
 {
-    int n;
-    cin >> n;
-    for (int i = n; i >= 0; i--){
-        cout << i << " ";
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    if((c - b > d) || (c - a > d))
+    {
+        cout << "No";
     }
+    else cout << "Yes";
+    return 0;
 }
