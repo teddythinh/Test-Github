@@ -3,7 +3,9 @@
 using namespace std;
 int main()
 {
-    int w, h;
-    cin >> w >> h;
-    cout << w << " " << h << endl << w * h;
+    int n;
+    cin >> n;
+    for (int i = n; i >= 0; i--){
+        cout << i << " ";
+    }
 }
