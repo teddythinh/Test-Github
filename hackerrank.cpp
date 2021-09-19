@@ -3,5 +3,5 @@
 using namespace std;
 int main()
 {
-    cout << "thinh dep trai" << endl;
+    cout << "thinh dep trai va rat ngau" << endl;
 }
