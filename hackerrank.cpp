@@ -1,31 +1,33 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
-
 int main()
 {
-    int a, b, c, d, e;
-    cin >> a >> b >> c >> d >> e;
-    while (a != 1 || b != 2 || c != 3 || d != 4 || e != 5)
-    {
-        if (a > b)
-        {
-            swap(a, b);
-            cout << a << " " << b << " " << c << " " << d << " " << e << endl;
+    double c, n, a[1000], sum, count = 0, avg, ans;
+    cin >> c;
+
+    for(int i = 0; i < c; i++) {
+        cin >> n;
+        for(int j = 0; j < n; j++) {
+            cin >> a[j];
+            sum = sum + a[j];
+            avg = sum / n;
+            if(a[j] > avg) {
+                count++;
+            }
+            ans = (count / n) * 100;
         }
-        if (b > c)
-        {
-            swap(b, c);
-            cout << a << " " << b << " " << c << " " << d << " " << e << endl;
+        for(int j = 0; j < n; j++) {
+            if(a[j] > avg) {
+                count++;
+            }
+            ans = (count / n) * 100;
         }
-        if (c > d)
-        {
-            swap(c, d);
-            cout << a << " " << b << " " << c << " " << d << " " << e << endl;
-        }
-        if (d > e)
-        {
-            swap(d, e);
-            cout << a << " " << b << " " << c << " " << d << " " << e << endl;
-        }
+        cout << fixed << setprecision(3) << ans << "%" << endl;
+        sum = 0;
+        avg = 0;
+        count = 0;
+        ans = 0;
     }
+    return 0;
 }
