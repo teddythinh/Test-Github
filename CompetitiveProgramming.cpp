@@ -1,12 +1,8 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int main(){
-    int a, b, c, n;
-    cin >> a >> b >> c >> n;
-    if(a != 0 && b != 0 && c != 0 && (a + b + c) >= n && 3 <= n){
-        cout << "YES";
-    }
-    else {
-        cout << "NO";
-    }
+    string a;
+    getline(cin, a);
+    cout << "Thank you, " << a << ", and farewell!";
 }
