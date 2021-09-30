@@ -1,12 +1,12 @@
-b = "problem"
-n = 1001
-while n < 1001:
-    a = input()
-    if b in a:
-        print("yes")
-    else: print("no")
-    assert n > 0
-    chunk = fp.read(n)
-    if chunk == '':
-        break
-    process(chunk)
+print("Today's date?")
+date = input()
+print("Breakfast calories?")
+b = int(input())
+print("Lunch calories?")
+l = int(input())
+print("Dinner calories?")
+d = int(input())
+print("Snack calories?")
+s = int(input())
+sum = b + l + d + s
+print("calorie content for " + date + ": " + str(sum))
