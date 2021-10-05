@@ -11,12 +11,6 @@ using namespace std;
 string ltrim(const string &);
 string rtrim(const string &);
 
-/*
- * Complete the 'fizzBuzz' function below.
- *
- * The function accepts INTEGER n as parameter.
- */
-
 void fizzBuzz(int n) {
     for(int i = 1; i <= n; i++) {
         if (i % 5 == 0 && i % 3 == 0) cout << "FizzBuzz" << endl;
