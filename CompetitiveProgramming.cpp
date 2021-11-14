@@ -1,38 +1,26 @@
 #include <iostream>
-#include <vector>
 #include <string>
- 
 using namespace std;
- 
-// Complete the solve function below.
-void solve(vector<int> arr) {
-    int n = arr.size();
-    int max_sum = 0;
-    int max_index = 0;
-    int min_index = 0;
-    int min_sum = 0;
-    int sum = 0;
-    for(int i = 0; i < n; i++){
-        sum += arr[i];
-        if(sum > max_sum){
-            max_sum = sum;
-            max_index = i;
-        }
-        if(sum < min_sum){
-            min_sum = sum;
-            min_index = i;
-        }
-    }
-    cout << max_index + 1 << " " << min_index + 1 << endl;
-}
 
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string s;
     int n;
     cin >> n;
-    vector<int> arr(n);
-    for(int arr_i = 0; arr_i < n; arr_i++){
-       cin >> arr[arr_i];
+    
+    for (int i = 0; i <= n; i++) {
+        getline(cin, s);
+        if (s.find("Simon says") != string::npos) {
+            for(int j = 10; j < s.size(); j++){
+                cout << s[j];
+            }
+        }
+        else continue;
+        cout << endl;
     }
-    solve(arr);
+
     return 0;
+
+
 }
