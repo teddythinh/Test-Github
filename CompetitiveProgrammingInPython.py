@@ -1,46 +1,38 @@
-# a = int(input())
-# b = int(input())
-
-# def isSquare(n):
-#     return int(n ** 0.5) ** 2 == n
-
-# def reverse(n):
-#     if n % 10 == 0:
-#         return 0
-#     return int(str(n)[::-1])
-
-# count = 0
-
-# for i in range(a, b + 1):
-#     temp = reverse(i)
-#     if temp % 10 == 0:
-#         continue
-#     if isSquare(i) and isSquare(reverse(i)):
-#         count += 1
-# print(str(count))
-
+m = str(input())
 n = int(input())
-count = 0
-for i in range(n):
-    a = str(input())
-    t1 = "a"
-    t2 = "e"
-    t3 = "i"
-    t4 = "o"
-    t5 = "u"
-    t6 = "ea"
-    if t1 in a:
-        count += 1
-    if t2 in a:
-        count += 1
-    if t3 in a:
-        count += 1
-    if t4 in a:
-        count += 1
-    if t5 in a:
-        count += 1
-    print(count)
-    count = 0
 
+min_pos = 0
+min_val = 10000000000
+min_val = int(min_val)
+swap_pos = 0
 
-   
+for i in range(len(m)):
+    value = 0
+    value = int(value)
+    temp_swap_pos = 0
+    if i == 0:
+        value = m[i] + m[i + 1]
+        temp_swap_pos = i + 1
+    elif i == len(m) - 1:
+        value = m[i] + m[i-1]  
+        temp_swap_pos = i - 1
+    else: 
+        if m[i - 1] <= m[i + 1]:
+            value = m[i - 1] + m[i]
+        else:
+            value = m[i] + m[i + 1]
+        if m[i - 1] <= m[i + 1]:
+            temp_swap_pos = i - 1
+        else: 
+            temp_swap_pos = i + 1
+    if min_val > value or (min_val == value and m[min_pos] > m[i]):
+        min_pos = i
+        min_val = value
+        swap_pos = temp_swap_pos
+
+while (True):
+    n -= 1
+    if n == 0: break
+    print(m[min_pos])
+    swap(min_pos, swap_pos)
+
