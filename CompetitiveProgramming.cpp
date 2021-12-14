@@ -8,39 +8,39 @@
 
 using namespace std;
 
-int main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(NULL);
-    cout.tie(NULL);
+// int main(){
+//     ios_base::sync_with_stdio(0);
+//     cin.tie(NULL);
+//     cout.tie(NULL);
 
-    int64_t n, b;
-    cin >> n;
-    vector<int64_t> a;
-    while(n--) {
-        cin >> b;
-        a.push_back(b);
-    }
-    string s;
-    cin >> s;
-    int64_t sum = 0;
-    int i = 0;
-    int j = 0;
-    while (i < s.size()) {
-        while( j < a.size()) {
+//     int64_t n, b;
+//     cin >> n;
+//     vector<int64_t> a;
+//     while(n--) {
+//         cin >> b;
+//         a.push_back(b);
+//     }
+//     string s;
+//     cin >> s;
+//     int64_t sum = 0;
+//     int i = 0;
+//     int j = 0;
+//     while (i < s.size()) {
+//         while( j < a.size()) {
 
-            if(s[i] == '0') {
-                if(a[j] % 2 == 0) a[j] /= 2;
-            }
-            else if(s[i] == '1') {
-                if(a[j] % 2 == 1) a[j] -= 1;
-            }
-            sum += a[j];
-            j++;
-        }
-        cout << sum << endl;
-        i++;
-    }
-}
+//             if(s[i] == '0') {
+//                 if(a[j] % 2 == 0) a[j] /= 2;
+//             }
+//             else if(s[i] == '1') {
+//                 if(a[j] % 2 == 1) a[j] -= 1;
+//             }
+//             sum += a[j];
+//             j++;
+//         }
+//         cout << sum << endl;
+//         i++;
+//     }
+// }
 
 // int main(){
 //     int n;
@@ -110,3 +110,31 @@ int main(){
         // }
     // }
 // }
+
+int main() {
+    int n, a, b, c, d;
+    cin >> n;
+    for(int i = 0; i < n; i++) {
+        cin >> a >> b;
+        cin >> c >> d;
+
+        if (b != 0 || d != 0) {
+            int temp1 = 0, temp2 = 0;
+            temp1 = pow(10, b);
+            temp2 = pow(10, d);
+            a = a * temp1;
+            c = c * temp2;
+            
+            // cout << a << " " << c << endl;
+            if(a > c) cout << ">" << endl;
+            else if (a < c) cout << "<" << endl;
+            else if (a == c) cout << "=" << endl;
+        }
+        else {
+            if(a > c) cout << ">" << endl;
+            else if (a < c) cout << "<" << endl;
+            else if (a == c) cout << "=" << endl;
+        }
+        
+    }
+}
